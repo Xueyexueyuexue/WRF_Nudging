@@ -1,3 +1,4 @@
+> 正在施工
 # obsGRID同化
 obsgrid同化过程主要包括：观测数据下载，数据预处理，安装与运行obsgrid三个过程。更多过程参考 [UCAR_WRF指南第七章](https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap7.html)
 ## 观测数据下载
@@ -62,4 +63,5 @@ obs_filename                = './util/OBS'
 #### metoa_em*
 生成的`metoa_em*`文件可以通过以下两个方法运行real.exe  
 1. 重命名或链接`metoa_em*`文件为`met_em*`，之后按照默认方法运行real.exe
+
 2. 
