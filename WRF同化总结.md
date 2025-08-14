@@ -1,4 +1,5 @@
 > 正在施工
+
 # obsGRID同化
 obsgrid同化过程主要包括：观测数据下载，数据预处理，安装与运行obsgrid三个过程。更多过程参考 [UCAR_WRF指南第七章](https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap7.html)
 ## 观测数据下载
@@ -6,7 +7,8 @@ obsgrid同化过程主要包括：观测数据下载，数据预处理，安装�
 高空数据 NCEP BUFR 格式 [ds351.0](http://rda.ucar.edu/datasets/ds351.0/)  
 表面数据 NCEP BUFR 格式 [ds461.0](http://rda.ucar.edu/datasets/ds461.0/)  
 打开链接后选择DATA ACCESS -> 选择little_r format 的File Listing -> complete file list  
-之后选择合适年份，筛选文件选择csh下载脚本，进入服务器./运行
+之后选择合适年份，筛选文件选择csh下载脚本，进入服务器./运行  
+
 
 ## 数据预处理
 将下载好的高空与地面数据一同放入WRF_Nudging-main文件夹下  
@@ -15,9 +17,7 @@ obsgrid同化过程主要包括：观测数据下载，数据预处理，安装�
 ./combineSurfaceToObs.sh
 ./combineCobsToRdaobs.sh
 ```
-依次将 `SURFACE_OBS:YYYYMMDD` 和 `OBS:YYYYMMDD` 整和成 `C_OBS:YYYYMMDD`  
-并所有的探测数据写入`rda_obs`  
-
+依次将`SURFACE_OBS:YYYYMMDD` 和 `OBS:YYYYMMDD` `$CMAQ_DATA/bcon`整和成 `C_OBS:YYYYMMDD`  并所有的探测数据写入`rda_obs`  
 ## 安装与运行obsgrid
 ### 安装obsgrid
 脚本源代码可以从以下路径获取 https://github.com/wrf-model/OBSGRID 或 https://www2.mmm.ucar.edu/wrf/users/download/get_sources_pproc_util.html  
@@ -63,5 +63,5 @@ obs_filename                = './util/OBS'
 #### metoa_em*
 生成的`metoa_em*`文件可以通过以下两个方法运行real.exe  
 1. 重命名或链接`metoa_em*`文件为`met_em*`，之后按照默认方法运行real.exe
-
 2. 
+
