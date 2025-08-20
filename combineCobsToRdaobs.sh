@@ -1,7 +1,9 @@
 #!/bin/bash
 
-	obspre="C_OBS:"
-	filout="rda_obs"
+COBSDIR=                     #location of c_obs
+OUTDIR=                      #output directory
+obspre="$COBSDIR/C_OBS:"
+filout="$OUTDIR/rda_obs"
 
 rm -rf ${filout}
 touch ${filout}
