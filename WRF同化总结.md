@@ -73,7 +73,7 @@ obs_filename                = './util/OBS'
 
 ### 修改namelist.input
 [Return to Top](#Return_to_Top)  
-前面处理了OBS的地面以及高空数据，所以此处默认将fsfdda_d01 ， metoa_em*和 OBS_DOMAINdxxx均使用上，即使用grid analysis nudging、surface grid nudging和observational nudging  
+前面处理了OBS的地面以及高空数据，所以此处默认将fsfdda_d01 ， metoa_em*和 OBS_DOMAINdxxx均使用上，即使用grid analysis nudging、surface grid nudging和observational nudging
 以下是示例namelist参数以及其意义 ，修改&ffda部分
 
 Tabel 1. grid analysis nuging与surface grid nudging 参数
@@ -166,6 +166,6 @@ Table 3 spectral analysis nudging参数
 |       xwavenum       |    3    |                                                    top wave number to nudge in the x-direction; a reasonable value is 3                                                    |
 |       ywavenum       |    3    |                                                    top wave number to nudge in the y-direction; a reasonable value is 3                                                    |
 
-
+更多namelist相关设置可以参考[WRF用户指南文档](https://www2.mmm.ucar.edu/wrf/users/wrf_users_guide/build/html/overview.html)  
 附上包含OBSGRID的WRF运行流程图  
 ![图1](https://github.com/Xueyexueyuexue/WRF_Nudging/blob/main/WRF%20flow%20chart.png)
