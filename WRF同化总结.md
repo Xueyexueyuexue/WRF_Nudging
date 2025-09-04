@@ -106,34 +106,34 @@ Tabel 1. grid analysis nuging与surface grid nudging 参数
 
 Table 2. observational nudging 参数
 
-|       **变量名**       | **推荐值** |                                                                  **描述**                                                                   |
-|:-------------------:|:-------:|:-----------------------------------------------------------------------------------------------------------------------------------------:|
-|    obs_nudge_opt    |    1    | set to =1 to turn on observational nudging; must also set auxinput11_invterval and auxinput11_end_h under &time_control in namelist.input |
-|       max_obs       | 150000  |                               maximum number of observations used for a domain during any given time window                               |
-|     fdda_start      |    0    |                                                observational nudging start time (in mins)                                                 |
-|      fdda_end       |  99999  |                                                 observational nudging end time (in mins)                                                  |
-|   obs_nudge_wind    |    1    |                                                     set to =1 to turn on wind nudging                                                     |
-|    obs_coef_wind    |  6.E-4  |                                                    nudging coefficient for wind (s-1)                                                     |
-|   obs_nudge_temp    |    1    |                                                 set to =1 to turn on temperature nudging                                                  |
-|    obs_coef_temp    |  6.E-4  |                                                 nudging coefficient for temperature (s-1)                                                 |
-|   obs_nudge_mois    |    1    |                                              set to =1 to turn on vapor mixing ratio nudging                                              |
-|    obs_coef_mois    |  6.E-4  |                                             nudging coefficient for vapor mixing ratio (s-1)                                              |
-|      obs_rinxy      |   240   |                                                  horizontal radius of influence (in km)                                                   |
-|     obs_rinsig      |   0.1   |                                                   vertical radius of influence (in eta)                                                   |
-|     obs_twindo      | 0.6667  |                             half-period time window over which an observation is used for nudging (in hours)                              |
-|      obs_npfi       |   10    |                                         frequency in coarse grid timesteps for diagnostic prints                                          |
-|      obs_ionf       |    2    |                             frequency in coarse grid timesteps for observational input and error calculation                              |
-|     obs_idynin      |    0    |              for dynamic initialization, turns on ramping-down function to gradually turn off FDDA before the pure forecast               |
-|     obs_dtramp      |   40    |                               time period (in mins) over which the nudging is ramped down from one to zero                                |
-|     obs_prt_max     |   100   |                                            maximum allowed obs entries in diagnostic printout                                             |
-|    obs_prt_freq     |   100   |                                          frequency in observation index for diagnostic printout                                           |
-|   obs_ipf_in4dob    | .true.  |                                          set to =.true. to print observational input diagnostics                                          |
-|    obs_ipf_errob    | .true.  |                                          set to =.true. to print observational error diagnostics                                          |
-|    obs_ipf_nudob    | .true.  |                                         set to =.true. to print observational nudging diagnostics                                         |
-|    obs_ipf_init     | .true.  |                                              enables observational printed warning messages                                               |
-| obs_no_pbl_nudge_uv |    0    |                                             set to =1 to turn off wind nudging within the PBL                                             |
-| obs_no_pbl_nudge_t  |    0    |                                         set to =1 to turn off temperature nudging within the PBL                                          |
-| obs_no_pbl_nudge_q  |    0    |                                           set to =1 to turn off moisture nudging within the PBL                                           |
+|       **变量名**       |  **推荐值**  |                                                                  **描述**                                                                   |
+|:-------------------:|:---------:|:-----------------------------------------------------------------------------------------------------------------------------------------:|
+|    obs_nudge_opt    |     1     | set to =1 to turn on observational nudging; must also set auxinput11_invterval and auxinput11_end_h under &time_control in namelist.input |
+|       max_obs       |  150000   |                               maximum number of observations used for a domain during any given time window                               |
+|     fdda_start      |     0     |                                                observational nudging start time (in mins)                                                 |
+|      fdda_end       |   99999   |                                                 observational nudging end time (in mins)                                                  |
+|   obs_nudge_wind    |     1     |                                                     set to =1 to turn on wind nudging                                                     |
+|    obs_coef_wind    |   6.E-4   |                                                    nudging coefficient for wind (s-1)                                                     |
+|   obs_nudge_temp    |     1     |                                                 set to =1 to turn on temperature nudging                                                  |
+|    obs_coef_temp    |   6.E-4   |                                                 nudging coefficient for temperature (s-1)                                                 |
+|   obs_nudge_mois    |     1     |                                              set to =1 to turn on vapor mixing ratio nudging                                              |
+|    obs_coef_mois    |   6.E-4   |                                             nudging coefficient for vapor mixing ratio (s-1)                                              |
+|      obs_rinxy      |    240    |                                                  horizontal radius of influence (in km)                                                   |
+|     obs_rinsig      |    0.1    |                                                   vertical radius of influence (in eta)                                                   |
+|     obs_twindo      |  0.6667   |                             half-period time window over which an observation is used for nudging (in hours)                              |
+|      obs_npfi       |    10     |                                         frequency in coarse grid timesteps for diagnostic prints                                          |
+|      obs_ionf       |     2     |                             frequency in coarse grid timesteps for observational input and error calculation                              |
+|     obs_idynin      |     0     |              for dynamic initialization, turns on ramping-down function to gradually turn off FDDA before the pure forecast               |
+|     obs_dtramp      |    40     |                               time period (in mins) over which the nudging is ramped down from one to zero                                |
+|     obs_prt_max     |    100    |                                            maximum allowed obs entries in diagnostic printout                                             |
+|    obs_prt_freq     |    100    |                                          frequency in observation index for diagnostic printout                                           |
+|   obs_ipf_in4dob    |  .true.   |                                          set to =.true. to print observational input diagnostics                                          |
+|    obs_ipf_errob    |  .true.   |                                          set to =.true. to print observational error diagnostics                                          |
+|    obs_ipf_nudob    |  .true.   |                                         set to =.true. to print observational nudging diagnostics                                         |
+|    obs_ipf_init     |  .true.   |                                              enables observational printed warning messages                                               |
+| obs_no_pbl_nudge_uv |     0     |                                             set to =1 to turn off wind nudging within the PBL                                             |
+| obs_no_pbl_nudge_t  |     0     |                                         set to =1 to turn off temperature nudging within the PBL                                          |
+| obs_no_pbl_nudge_q  |     0     |                                           set to =1 to turn off moisture nudging within the PBL                                           |
 
 <font color=#f9906F size =4>特别强调</font>，开启observational nudging后需要在&time_control 增加以下变量  
 ```
@@ -144,27 +144,27 @@ auxinput11_end_h      = 6
 以下变量在 grid_fdda=2时有用，给出建议取值如下
 Table 3 spectral analysis nudging参数
 
-|       **变量名**        | **推荐值** |                                                                                   **描述**                                                                                   |
-|:--------------------:|:-------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|      grid_fdda       |    2    |                             option to turn on grid nudging;<br>=0 : off<br>=1 : grid analysis nudging on<br>=2 : spectral analysis nudging on                              |
-|       fgdtzero       |    0    |                                                        set to =1 to nudge tendencies to zero in between fdda calls                                                         |
-| if_no_pbl_nudging_ph |    0    |                                                 set to =1 to turn off nudging of perturbation geopotential (ph) in the PBL                                                 |
-|      if_zfac_uv      |    0    |                    determines which layers nudging will occur for u and v;<br>=0 : nudge in all layers<br>=1 : limit nudging to levels above k_zfac_uv                     |
-|      k_zfac_uv       |   10    |                                                         below this model level, nudging is turned off for u and v                                                          |
-|      dk_zfac_uv      |    1    |                                  depth (in k dimension) between k_zfac_uv to dk_zfac_uv where nudging increases linearly to full strength                                  |
-|      if_zfac_t       |    0    |             determines which layers nudging will occur for temperature;<br>=0 : nudge temperature in all layers<br>=1 : limit nudging to levels above k_zfac_t             |
-|       k_zfac_t       |   10    |                                                       below this model level, nudging is turned off for temperature                                                        |
-|      dk_zfac_t       |    1    |                                   depth (in k dimension) between k_zfac_t to dk_zfac_t where nudging increases linearly to full strength                                   |
-|      if_zfac_ph      |    0    |       determines which layers nudging will occur for perturbation geopotential (ph);<br>=0 : nudge ph in all layers<br>=1 : limit nudging to levels above k_zfac_tph       |
-|      k_zfac_ph       |   10    |                                              below this model level, nudging is turned off for perturbation geopotential (ph)                                              |
-|      dk_zfac_ph      |    1    |                                  depth (in k dimension) between k_zfac_ph to dk_zfac_ph where nudging increases linearly to full strength                                  |
-|      if_zfac_q       |    0    |                 determines which layers nudging will occur for qvapor;<br>=0 : nudge qvapor in all layers<br>=1 : limit nudging to levels above k_zfac_tq                  |
-|       k_zfac_q       |   10    |                                                          below this model level, nudging is turned off for qvapor                                                          |
-|      dk_zfac_q       |    1    |                                   depth (in k dimension) between k_zfac_q to dk_zfac_q where nudging increases linearly to full strength                                   |
-|         gph          | 0.0003  |                                            nudging coefficient for perturbation geopotential (ph); a reasonable value is 0.0003                                            |
-|        ktrop         |    0    | option to cap spectral nudging of potential temperature and water vapor mixing ratio at a user-defined layer above the PBL; nominally selected to represent the tropopause |
-|       xwavenum       |    3    |                                                    top wave number to nudge in the x-direction; a reasonable value is 3                                                    |
-|       ywavenum       |    3    |                                                    top wave number to nudge in the y-direction; a reasonable value is 3                                                    |
+|       **变量名**        |  **推荐值**   |                                                                                   **描述**                                                                                   |
+|:--------------------:|:----------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|      grid_fdda       |     2      |                             option to turn on grid nudging;<br>=0 : off<br>=1 : grid analysis nudging on<br>=2 : spectral analysis nudging on                              |
+|       fgdtzero       |     0      |                                                        set to =1 to nudge tendencies to zero in between fdda calls                                                         |
+| if_no_pbl_nudging_ph |     0      |                                                 set to =1 to turn off nudging of perturbation geopotential (ph) in the PBL                                                 |
+|      if_zfac_uv      |     0      |                    determines which layers nudging will occur for u and v;<br>=0 : nudge in all layers<br>=1 : limit nudging to levels above k_zfac_uv                     |
+|      k_zfac_uv       |     10     |                                                         below this model level, nudging is turned off for u and v                                                          |
+|      dk_zfac_uv      |     1      |                                  depth (in k dimension) between k_zfac_uv to dk_zfac_uv where nudging increases linearly to full strength                                  |
+|      if_zfac_t       |     0      |             determines which layers nudging will occur for temperature;<br>=0 : nudge temperature in all layers<br>=1 : limit nudging to levels above k_zfac_t             |
+|       k_zfac_t       |     10     |                                                       below this model level, nudging is turned off for temperature                                                        |
+|      dk_zfac_t       |     1      |                                   depth (in k dimension) between k_zfac_t to dk_zfac_t where nudging increases linearly to full strength                                   |
+|      if_zfac_ph      |     0      |       determines which layers nudging will occur for perturbation geopotential (ph);<br>=0 : nudge ph in all layers<br>=1 : limit nudging to levels above k_zfac_tph       |
+|      k_zfac_ph       |     10     |                                              below this model level, nudging is turned off for perturbation geopotential (ph)                                              |
+|      dk_zfac_ph      |     1      |                                  depth (in k dimension) between k_zfac_ph to dk_zfac_ph where nudging increases linearly to full strength                                  |
+|      if_zfac_q       |     0      |                 determines which layers nudging will occur for qvapor;<br>=0 : nudge qvapor in all layers<br>=1 : limit nudging to levels above k_zfac_tq                  |
+|       k_zfac_q       |     10     |                                                          below this model level, nudging is turned off for qvapor                                                          |
+|      dk_zfac_q       |     1      |                                   depth (in k dimension) between k_zfac_q to dk_zfac_q where nudging increases linearly to full strength                                   |
+|         gph          |   0.0003   |                                            nudging coefficient for perturbation geopotential (ph); a reasonable value is 0.0003                                            |
+|        ktrop         |     0      | option to cap spectral nudging of potential temperature and water vapor mixing ratio at a user-defined layer above the PBL; nominally selected to represent the tropopause |
+|       xwavenum       |     3      |                                                    top wave number to nudge in the x-direction; a reasonable value is 3                                                    |
+|       ywavenum       |     3      |                                                    top wave number to nudge in the y-direction; a reasonable value is 3                                                    |
 
 更多namelist相关设置可以参考[WRF用户指南文档](https://www2.mmm.ucar.edu/wrf/users/wrf_users_guide/build/html/overview.html)  
 附上包含OBSGRID的WRF运行流程图  
